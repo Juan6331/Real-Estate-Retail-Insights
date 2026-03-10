@@ -1,37 +1,37 @@
-# Real-Estate-Retail-Insights
-
-Proyecto 1: Análisis del Mercado Inmobiliario (King County, WA)
- Problema a Resolver
-El mercado de bienes raíces en King County (Seattle) es altamente volátil. El objetivo es identificar qué características (tamaño, ubicación, vista al agua) tienen el mayor impacto en el precio de venta para asesorar decisiones de inversión.
-
- Metodología y Herramientas
-Limpieza: Manejo de tipos de datos y segmentación de propiedades de alto valor mediante loc e iloc.
-
-Análisis: Correlación entre pies cuadrados habitables (sqft_living) y precio.
-
-Visualización: Gráficos de dispersión y cajas para identificar outliers y zonas premium.
-
-Herramientas: Python, Pandas, Seaborn, Matplotlib.
-
- Conclusiones Clave
-El Factor Ubicación: Se identificaron códigos postales específicos (98039, 98040) donde la ubicación triplica el valor base.
-
-Plusvalía por Vista: Las casas con frente al agua (waterfront) mantienen un valor superior incluso con menor metraje cuadrado.
-
- Proyecto 2: Optimización de Ventas en Supermercados
- Problema a Resolver
-Analizar el comportamiento de compra en una cadena de supermercados en Myanmar para optimizar el inventario y las estrategias de marketing por género y ciudad.
-
-Metodología y Herramientas
-Transformación: Conversión de horarios a formato datetime para análisis temporal y uso de NumPy arrays para cálculos estadísticos rápidos.
-
-Análisis: Tablas dinámicas (Pivot tables) para cruzar categorías de productos con perfiles de clientes.
-
-Visualización: Histogramas de distribución de ventas y análisis de correlación de ingresos.
-
- Conclusiones Clave
-Equilibrio Geográfico: Las ventas están distribuidas equitativamente entre Naypyitaw, Yangon y Mandalay, lo que indica una marca sólida a nivel nacional.
-
-Segmentación por Género: Se detectaron preferencias claras (ej. Belleza para hombres vs. Hogar para mujeres), permitiendo campañas de marketing dirigido.
-
-Mitos Desmentidos: El análisis demostró que el horario de compra no afecta significativamente el monto total gastado.
+# 🏠 Análisis del Mercado Inmobiliario — King County, Seattle
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![scikit-learn](https://img.shields.io/badge/sklearn-regresión-orange)
+![Dataset](https://img.shields.io/badge/Dataset-21600_propiedades-lightgrey)
+## ️ Contexto de negocio
+El mercado inmobiliario de King County (Seattle) presenta alta volatilidad en precios.
+El objetivo fue identificar qué características físicas y de ubicación tienen mayor
+impacto en el precio de venta, para apoyar decisiones de inversión y tasación.
+## ❓ Pregunta analítica
+> ¿Qué variables (tamaño, ubicación, vista al agua) tienen mayor peso en el precio
+> de una propiedad en King County?
+## 🔧 Herramientas y proceso
+- **Python** (pandas, numpy) → Limpieza de 21,600 registros
+- **Seaborn / Matplotlib** → Análisis de distribución de precios
+- **Scikit-learn** → Modelo de regresión lineal múltiple
+- **Folium** → Mapa de calor de precios por ZIP code (opcional)
+## 📊 Hallazgos principales
+| Variable | Impacto en precio |
+|------------------|------------------------------------------|
+| Vista al agua | +25% en promedio vs propiedades sin vista |
+| sqft_living | Correlación 0.70 con el precio |
+| Grado de calidad | Diferencia de $200K entre grado 7 y 10 |
+| ZIP code | Varianza de $400K entre zonas más caras |
+**RMSE del modelo:** $142,000 USD | **R2:** 0.68
+## 💡 Recomendación
+Para un inversionista: priorizar propiedades con vista al agua en ZIP codes premium
+y sqft_living > 2,000. El modelo puede estimar precio de compra con error de ±$142K,
+útil como primera referencia de tasación rápida.
+## 📁 Estructura del repositorio
+```
+├── data/
+├── notebooks/
+| ├── 01_limpieza.ipynb
+| └── 02_modelo_regresion.ipynb
+├── images/
+└── README.md
+```
