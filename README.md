@@ -26,12 +26,5 @@ impacto en el precio de venta, para apoyar decisiones de inversión y tasación.
 Para un inversionista: priorizar propiedades con vista al agua en ZIP codes premium
 y sqft_living > 2,000. El modelo puede estimar precio de compra con error de ±$142K,
 útil como primera referencia de tasación rápida.
-## 📁 Estructura del repositorio
-```
-├── data/
-├── notebooks/
-| ├── 01_limpieza.ipynb
-| └── 02_modelo_regresion.ipynb
-├── images/
-└── README.md
+
 ```
