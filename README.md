@@ -34,6 +34,6 @@ y sqft_living > 2,000. El modelo puede estimar precio de compra con error de ±$
 
 El precio de las viviendas en King County está principalmente determinado por el tamaño habitable y la calidad de construcción. Factores como la ubicación (waterfront) también generan un impacto significativo, introduciendo primas de precio relevantes.
 
-Asimismo, la distribución sesgada del precio y la presencia de outliers sugieren la necesidad de aplicar transformaciones y considerar modelos más robustos para mejorar la capacidad predictiva.
+
 
 ```
